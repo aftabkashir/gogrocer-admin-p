@@ -29,6 +29,13 @@
             {
               "client_id": "79100073535-2khrgni11ki7cr3ldcjapikrvnnups4j.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "79100073535-bhpknfn8pma053uu1ueho4rg0gqs7444.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gogrocer.goGrocer"
+              }
             }
           ]
         }
@@ -58,6 +65,13 @@
             {
               "client_id": "79100073535-2khrgni11ki7cr3ldcjapikrvnnups4j.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "79100073535-bhpknfn8pma053uu1ueho4rg0gqs7444.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.gogrocer.goGrocer"
+              }
             }
           ]
         }

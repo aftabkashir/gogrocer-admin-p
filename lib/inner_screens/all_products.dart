@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../controllers/MenuController.dart' as custom;
+import '../controllers/MenuController.dart'as custom;
 import '../responsive.dart';
 import '../services/utils.dart';
 import '../widgets/grid_products.dart';
@@ -33,38 +33,39 @@ class _AllProductsScreenState extends State<AllProductsScreen> {
                 child: SideMenu(),
               ),
             Expanded(
-                // It takes 5/6 part of the screen
+              // It takes 5/6 part of the screen
                 flex: 5,
                 child: SingleChildScrollView(
-                     controller: ScrollController(),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 25,),
-                        Header(
-                          fct: () {
-                            context
-                                .read<custom.MenuController>()
-                                .controlProductsMenu();
-                          },
-                          title: 'All Products',
+                  controller: ScrollController(),
+                  child: Column(
+                    children: [
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      Header(
+                        fct: () {
+                          context
+                              .read<custom.MenuController>()
+                              .controlProductsMenu();
+                        },
+                        title: 'All products',
+                      ),
+                      const SizedBox(
+                        height: 25,
+                      ),
+                      Responsive(
+                        mobile: ProductGridWidget(
+                          crossAxisCount: size.width < 650 ? 2 : 4,
+                          childAspectRatio:
+                          size.width < 650 && size.width > 350 ? 1.1 : 0.8,
+                          isInMain: false,
                         ),
-                        const SizedBox(height: 25,),
-                        Responsive(
-                          mobile: ProductGridWidget(
-                            crossAxisCount: size.width < 650 ? 2 : 4,
-                            childAspectRatio:
-                                size.width < 650 && size.width > 350 ? 1.1 : 0.8,
-                            isInMain: false,
-                          ),
-                          desktop: ProductGridWidget(
-                            childAspectRatio: size.width < 1400 ? 0.8 : 1.05,
-                            isInMain: false,
-                          ),
+                        desktop: ProductGridWidget(
+                          childAspectRatio: size.width < 1400 ? 0.8 : 1.05,
+                          isInMain: false,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 )),
           ],
